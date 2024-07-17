@@ -180,8 +180,8 @@
 
 5. **Add the frontend service to `docker-compose.yml`, it should look like this**:
 
-   ```yaml
-   version: '3.8'
+```yaml
+version: '3.8'
 
 services:
   app:
@@ -231,8 +231,6 @@ services:
 networks:
   app-network:
     driver: bridge
-
-
    ```
 
 6. **Start the frontend container**:
