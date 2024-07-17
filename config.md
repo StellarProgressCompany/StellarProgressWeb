@@ -180,57 +180,57 @@
 
 5. **Add the frontend service to `docker-compose.yml`, it should look like this**:
 
-```yaml
-version: '3.8'
-
-services:
-  app:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    image: laravel-app
-    container_name: laravel-app
-    restart: unless-stopped
-    tty: true
-    environment:
-      SERVICE_NAME: app
-      SERVICE_TAGS: dev
-    working_dir: /var/www
-    volumes:
-      - ./backend:/var/www
-      - ./php.ini:/usr/local/etc/php/php.ini
-    ports:
-      - "8000:80"
-    networks:
-      - app-network
-
-  redis:
-    image: redis:alpine
-    container_name: redis
-    restart: unless-stopped
-    ports:
-      - "6379:6379"
-    networks:
-      - app-network
-
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    image: react-frontend
-    container_name: react-frontend
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./frontend:/usr/src/app
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
+  ```yaml
+  version: '3.8'
+  
+  services:
+    app:
+      build:
+        context: ./backend
+        dockerfile: Dockerfile
+      image: laravel-app
+      container_name: laravel-app
+      restart: unless-stopped
+      tty: true
+      environment:
+        SERVICE_NAME: app
+        SERVICE_TAGS: dev
+      working_dir: /var/www
+      volumes:
+        - ./backend:/var/www
+        - ./php.ini:/usr/local/etc/php/php.ini
+      ports:
+        - "8000:80"
+      networks:
+        - app-network
+  
+    redis:
+      image: redis:alpine
+      container_name: redis
+      restart: unless-stopped
+      ports:
+        - "6379:6379"
+      networks:
+        - app-network
+  
+    frontend:
+      build:
+        context: ./frontend
+        dockerfile: Dockerfile
+      image: react-frontend
+      container_name: react-frontend
+      restart: unless-stopped
+      tty: true
+      ports:
+        - "3000:3000"
+      volumes:
+        - ./frontend:/usr/src/app
+      networks:
+        - app-network
+  
+  networks:
+    app-network:
+      driver: bridge
    ```
 
 6. **Start the frontend container**:
