@@ -171,9 +171,12 @@ laravel new example-app
 ```
 
 If laravel not founded:
+
 A) Make sure you have the latest Laravel installer:
 
+```bash
 composer global require laravel/installer
+```
 
 B) Add composer bin folder to your $PATH:
 
@@ -187,7 +190,9 @@ source $HOME/.bashrc
 
 D) Try to output Laravel installer's version:
 
+```bash
 laravel -V
+```
 
 #### Step 6: Start Laravel's Local Development Server
 
