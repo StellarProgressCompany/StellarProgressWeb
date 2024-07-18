@@ -29,23 +29,7 @@ sudo apt install -y php8.1-curl
 
 #### Step 3: Install MariaDB (Optional)
 
-If you plan to use MariaDB as your database, follow these steps to install and configure it.
-
-**Introduction**
-
-MariaDB is an open-source relational database management system, commonly used as an alternative for MySQL as the database portion of the popular LAMP (Linux, Apache, MySQL, PHP/Python/Perl) stack. It is intended to be a drop-in replacement for MySQL.
-
-This tutorial will explain how to install MariaDB on an Ubuntu 22.04 server and verify that it is running and has a safe initial configuration.
-
-**Prerequisites**
-
-To follow this tutorial, you will need a server running Ubuntu 22.04. This server should have a non-root administrative user and a firewall configured with UFW. Set this up by following our initial server setup guide for Ubuntu 22.04.
-
 **Step 1 — Installing MariaDB**
-
-As of this writing, Ubuntu 22.04’s default APT repositories include MariaDB version 10.5.12.
-
-To install it, update the package index on your server with apt:
 
 ```bash
 sudo apt update
@@ -158,18 +142,6 @@ When installed from the default repositories, MariaDB will start running automat
 sudo systemctl status mariadb
 ```
 
-You’ll receive output that is similar to the following:
-
-Output:
-```
-● mariadb.service - MariaDB 10.5.12 database server
-     Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: enabled)
-     Active: active (running) since Fri 2022-03-11 22:01:33 UTC; 14min ago
-       Docs: man:mariadbd(8)
-             https://mariadb.com/kb/en/library/systemd/
-. . .
-```
-
 If MariaDB isn’t running, you can start it with the command:
 
 ```bash
@@ -181,32 +153,6 @@ For an additional check, you can try connecting to the database using the mysqla
 ```bash
 sudo mysqladmin version
 ```
-
-You will receive output similar to this:
-
-Output:
-```
-mysqladmin  Ver 9.1 Distrib 10.5.12-MariaDB, for debian-linux-gnu on x86_64
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Server version        10.5.12-MariaDB-1build1
-Protocol version    10
-Connection        Localhost via UNIX socket
-UNIX socket        /run/mysqld/mysqld.sock
-Uptime:            15 min 53 sec
-
-Threads: 1  Questions: 482  Slow queries: 0  Opens: 171  Open tables: 28  Queries per second avg: 0.505
-```
-
-**Conclusion**
-
-In this guide you installed the MariaDB relational database management system, and secured it using the mysql_secure_installation script that it came installed with. You also had the option to create a new administrative user that uses password authentication before testing the MariaDB server’s functionality.
-
-Now that you have a running and secure MariaDB server, here are some examples of next steps that you can take to work with the server:
-
-- Learn how to import and export databases
-- Practice running SQL queries
-- Incorporate MariaDB into a larger application stack
 
 #### Step 4: Install Laravel Installer
 
