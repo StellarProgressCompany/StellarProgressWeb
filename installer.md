@@ -80,3 +80,12 @@ composer install
 ```
 
 By following these steps, you should be able to install and set PHP 8.3 as the default version on your Ubuntu machine, resolving any issues with older PHP versions. If you encounter any specific errors or need further assistance, feel free to ask!
+
+
+
+sudo apt update
+sudo apt install -y curl php-cli php-mbstring git unzip
+cd ~
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+HASH=`curl - 2020.Baut's Developer` If saw
+
