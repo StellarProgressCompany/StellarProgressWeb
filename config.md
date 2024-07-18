@@ -152,9 +152,10 @@ restaurant-prototype/
 
 ### Step 2: Setting Up React Frontend with Docker
 
-1. **Create a React app**:
+1. **Create a React app, (update npm)**:
 
    ```sh
+   npm install -g npm
    npx create-react-app frontend
    cd frontend
    ```
