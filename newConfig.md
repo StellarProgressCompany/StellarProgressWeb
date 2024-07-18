@@ -2,7 +2,7 @@
 
 #### Prerequisites
 
-Before starting your first Laravel project, ensure that your local machine has PHP and Composer installed. If you're developing on macOS or Windows, you can install PHP, Composer, Node, and NPM quickly via [Laravel Herd](https://laravel.com/docs/10.x/herd).
+Before starting your first Laravel project, ensure that your local machine has PHP, Composer, Node, and NPM installed.
 
 #### Step 1: System Update and Upgrade
 
