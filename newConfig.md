@@ -196,9 +196,7 @@ laravel -V
 
 #### Step 6: Start Laravel's Local Development Server
 
-Navigate to your project directory and start the local development server using Laravel Artisan
-
-'s serve command:
+Navigate to your project directory and start the local development server using Laravel Artisan's serve command:
 
 ```bash
 cd example-app
