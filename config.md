@@ -52,7 +52,7 @@ Certainly! Here’s the guide with a detailed file structure overview at the end
 
 ```dockerfile
 # Dockerfile
-FROM php:8.3-fpm
+FROM php:8.2-fpm
  
 RUN apt-get update && apt-get install -y \
     build-essential \
