@@ -9,8 +9,10 @@ Certainly! Here’s the guide with a detailed file structure overview at the end
   Containers for isolating environments.
 ### Laravel: 
   PHP framework for backend logic.
-### React: 
+### React.js: 
   JavaScript library for building user interfaces.
+ ### Node.js: 
+  Required for the frontend (npm->used to manage JavaScript packavges from both React.js and Tailwind css). 
 ### Tailwind CSS: 
   Utility-first CSS framework for styling.
 ### Redis: 
