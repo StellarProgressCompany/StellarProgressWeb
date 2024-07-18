@@ -20,6 +20,13 @@ Certainly! Here’s the guide with a detailed file structure overview at the end
 
 ## Step-by-step guide on how to set up everything
 
+### Step 0: Prepare and update everything
+  It's essential to have the latest kernel version. The first command is to update every packet, and the 2nd checks if the latest kernel is installed.
+   ```sh
+   sudo apt update && upgrade -y
+   sudo apt install linux-image-amd64
+   ```
+
 ### Step 1: Setting Up Laravel Backend with Docker
 
 1. **Install Docker and Docker Compose**:
