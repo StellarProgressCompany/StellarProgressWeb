@@ -49,35 +49,37 @@ Certainly! Here’s the guide with a detailed file structure overview at the end
    Create a `Dockerfile` for Laravel.
 
    ```dockerfile
-   # Dockerfile
-   FROM php:8.0-fpm
+# Dockerfile
+FROM php:8.0-fpm
 
-   RUN apt-get update && apt-get install -y \
-       build-essential \
-       libpng-dev \
-       libjpeg62-turbo-dev \
-       libfreetype6-dev \
-       locales \
-       zip \
-       jpegoptim optipng pngquant gifsicle \
-       vim \
-       unzip \
-       git \
-       curl
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpng-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    locales \
+    zip \
+    jpegoptim optipng pngquant gifsicle \
+    vim \
+    unzip \
+    git \
+    curl \
+    libonig-dev
 
-   RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
-   RUN pecl install redis \
-       && docker-php-ext-enable redis
+RUN pecl install redis \
+    && docker-php-ext-enable redis
 
-   WORKDIR /var/www
+WORKDIR /var/www
 
-   COPY . /var/www
+COPY . /var/www
 
-   RUN chown -R www-data:www-data /var/www
+RUN chown -R www-data:www-data /var/www
 
-   EXPOSE 9000
-   CMD ["php-fpm"]
+EXPOSE 9000
+CMD ["php-fpm"]
+
    ```
 
 5. **Create a `docker-compose.yml` file**:
