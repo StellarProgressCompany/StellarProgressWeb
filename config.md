@@ -37,14 +37,17 @@ Certainly! Here’s the guide with a detailed file structure overview at the end
   
 #### It's essential for Laravel to work properly to ensure that PHP, Composer, Nodejs and Npm are all installed
    ```sh
-   uname -r
+   php -v
+   composer -V
+   node -v
+   npm -v
+   ```
+Finally update and upgrade everything before starting again.
+   ```sh
+   sudo apt update && upgrade -y
    ```
 
-
-
-
 ### Step 1: Setting Up Laravel Backend with Docker
-
 1. **Install Docker and Docker Compose**:
    Ensure Docker and Docker Compose are installed on your Kali Linux machine.
 
