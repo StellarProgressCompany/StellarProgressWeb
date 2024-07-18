@@ -20,6 +20,8 @@ Use the following command to install PHP, Composer, Node, and NPM:
 sudo apt install php composer nodejs npm -y
 ```
 
+Also install needed for laravel
+
 #### Step 3: Install Laravel Installer
 
 Install the Laravel installer globally via Composer. This tool allows you to select your preferred testing framework, database, and starter kit when creating new applications:
