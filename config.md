@@ -26,7 +26,22 @@ Certainly! Here’s the guide with a detailed file structure overview at the end
    sudo apt update && upgrade -y
    sudo apt install linux-image-amd64
    ```
-  Obviously it is then 
+  Obviously it is then necessary to reboot the system
+   ```sh
+   sudo reboot
+   ```
+  After rebooting, verify that it's the newest Kernel version
+   ```sh
+   uname -r
+   ```
+  
+#### It's essential for Laravel to work properly to ensure that PHP, Composer, Nodejs and Npm are all installed
+   ```sh
+   uname -r
+   ```
+
+
+
 
 ### Step 1: Setting Up Laravel Backend with Docker
 
