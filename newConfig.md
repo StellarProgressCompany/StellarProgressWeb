@@ -30,18 +30,6 @@ If you plan to use MariaDB as your database, follow these steps to install and c
 
 MariaDB is an open-source relational database management system, commonly used as an alternative for MySQL as the database portion of the popular LAMP (Linux, Apache, MySQL, PHP/Python/Perl) stack. It is intended to be a drop-in replacement for MySQL.
 
-The short version of this installation guide consists of these three steps:
-
-1. Update your package index using apt
-2. Install the mariadb-server package using apt. The package also pulls in related tools to interact with MariaDB
-3. Run the included mysql_secure_installation security script to restrict access to the server
-
-```bash
-sudo apt update
-sudo apt install mariadb-server
-sudo mysql_secure_installation
-```
-
 This tutorial will explain how to install MariaDB on an Ubuntu 22.04 server and verify that it is running and has a safe initial configuration.
 
 **Prerequisites**
