@@ -1,5 +1,16 @@
 ### Guide to Creating a Laravel Project
 
+
+
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code
+
+
+
+
 #### Prerequisites
 
 Before starting your first Laravel project, ensure that your local machine has PHP, Composer, Node, and NPM installed.
