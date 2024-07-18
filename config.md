@@ -26,6 +26,7 @@ Certainly! Here’s the guide with a detailed file structure overview at the end
    sudo apt update && upgrade -y
    sudo apt install linux-image-amd64
    ```
+  Obviously it is then 
 
 ### Step 1: Setting Up Laravel Backend with Docker
 
@@ -133,6 +134,11 @@ CMD ["php-fpm"]
 
    ```sh
    docker-compose up -d
+   ```
+7. **Build the Docker containers**:
+
+   ```sh
+   docker-compose build
    ```
 
 **File Structure after Step 1:**
