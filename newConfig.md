@@ -219,6 +219,25 @@ Create a new Laravel project using the Laravel installer:
 laravel new example-app
 ```
 
+If laravel not founded:
+A) Make sure you have the latest Laravel installer:
+
+composer global require laravel/installer
+
+B) Add composer bin folder to your $PATH:
+
+Edit your .bashrc file: gedit $HOME/.bashrc
+
+Add the following line: export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+C) Use the source command to force Ubuntu to reload your .bashrc file:
+
+source $HOME/.bashrc
+
+D) Try to output Laravel installer's version:
+
+laravel -V
+
 #### Step 6: Start Laravel's Local Development Server
 
 Navigate to your project directory and start the local development server using Laravel Artisan
