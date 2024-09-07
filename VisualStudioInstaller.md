@@ -1,54 +1,40 @@
-To install Visual Studio Code on Ubuntu, follow these steps:
+To install Visual Studio Code (VS Code) on Ubuntu via the terminal, follow these steps:
 
-### Step 1: Update the package lists
-Open a terminal and run the following command to ensure your package lists are up-to-date:
-```bash
-sudo apt update
-```
+### 1. **Update the Package Index**
+   Open your terminal and run the following command to update the package index:
+   ```bash
+   sudo apt update
+   ```
 
-### Step 2: Install necessary dependencies
-Install the `software-properties-common`, `apt-transport-https`, and `wget` packages if they are not already installed:
-```bash
-sudo apt install software-properties-common apt-transport-https wget
-```
+### 2. **Install Required Dependencies**
+   You'll need to install some required packages like `apt-transport-https` and `curl`:
+   ```bash
+   sudo apt install apt-transport-https curl
+   ```
 
-### Step 3: Import the Microsoft GPG key
-Use `wget` to download and add the Microsoft GPG key:
-```bash
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-```
+### 3. **Import the Microsoft GPG Key**
+   To verify the packages, you need to import Microsoft's GPG key:
+   ```bash
+   curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft.gpg
+   ```
 
-### Step 4: Enable the Visual Studio Code repository
-Add the Visual Studio Code repository to your system:
-```bash
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-```
+### 4. **Enable the Visual Studio Code Repository**
+   Add the VS Code repository to your system's list of software sources:
+   ```bash
+   echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+   ```
 
-### Step 5: Update the package lists again
-Run the `update` command to refresh the package lists:
-```bash
-sudo apt update
-```
+### 5. **Install Visual Studio Code**
+   Now, update the package index again and install VS Code:
+   ```bash
+   sudo apt update
+   sudo apt install code
+   ```
 
-### Step 6: Install Visual Studio Code
-Now, install Visual Studio Code using the `apt` command:
-```bash
-sudo apt install code
-```
+### 6. **Launch VS Code**
+   You can now launch Visual Studio Code by typing:
+   ```bash
+   code
+   ```
 
-### Step 7: Launch Visual Studio Code
-Once the installation is complete, you can launch Visual Studio Code from the terminal by typing:
-```bash
-code
-```
-Or, you can find Visual Studio Code in your application menu and launch it from there.
-
-### Troubleshooting
-
-If you encounter any issues during the installation, here are some common troubleshooting steps:
-
-- **Ensure your system is up-to-date:** Make sure your system is fully updated by running `sudo apt upgrade` and then retry the steps above.
-- **Check for missing dependencies:** Ensure all necessary dependencies are installed and try again.
-- **Re-add the repository:** Sometimes, re-adding the repository can resolve issues.
-
-These steps should help you successfully install and run Visual Studio Code on your Ubuntu system. If you have any specific issues or need further assistance, feel free to ask!
+This will install and open Visual Studio Code on your Ubuntu system!
